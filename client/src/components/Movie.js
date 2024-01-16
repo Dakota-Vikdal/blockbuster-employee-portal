@@ -24,12 +24,6 @@ function Movie() {
     })
     setMovies(filteredArray)
   }
-  // const deleteMovieFromState = goodbyeMovie => {
-  //   const filteredArray = movies.filter(goodbyeMovieObj => {
-  //     return goodbyeMovieObj.id !== goodbyeMovie
-  //   })
-  //   setMovies(filteredArray)
-  // }
 
   useEffect(() => {
     fetch("http://127.0.0.1:5555/movies")
