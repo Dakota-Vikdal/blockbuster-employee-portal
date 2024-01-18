@@ -25,6 +25,8 @@ function NewClient({addClient}) {
             telephone_number: newNumber
         }
         addClient(newClient)
+
+        e.target.reset()
     }
 
     return (

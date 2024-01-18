@@ -18,6 +18,7 @@ function NewMovie({addMovie}) {
             rating: newRating
         }
         addMovie(newMovie)
+        e.target.reset()
     }
 
     return (

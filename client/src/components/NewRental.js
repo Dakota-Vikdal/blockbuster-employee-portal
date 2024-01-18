@@ -7,8 +7,8 @@ function NewRental({addRental}) {
     const [newClientId, setClientId] = useState('')
 
     
-    const movieIdChange = e => setMovieId(e.target.value)
-    const clientIdChange = e => setClientId(e.target.value)
+    const movieIdChange = (e) => setMovieId(e.target.value)
+    const clientIdChange = (e) => setClientId(e.target.value)
     
     const handleSubmit = e => {
         e.preventDefault()
@@ -17,6 +17,8 @@ function NewRental({addRental}) {
             client_id: newClientId 
         }
         addRental(newRental)
+        
+        e.target.reset()
     }
 
     return (

@@ -118,6 +118,16 @@ class GetRentalsById(Resource):
         db.session.commit()
         return make_response(r.to_dict(), 200)
     
+    #######################################################################
+    ############### New Addition ##########################################
+    def delete(self, id):
+        r_instance = Rental.query.filter_by(id=id).first()
+        if r_instance == None:
+            return make_response({'error':'Movie Not Found'}, 404)
+        db.session.delete(r_instance)
+        db.session.commit()
+        return make_response({}, 204)
+    
 api.add_resource(GetRentalsById, '/rentals/<int:id>')
 class Clients(Resource):
     def get(self):
@@ -177,3 +187,6 @@ api.add_resource(GetClientsById, '/clients/<int:id>')
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
+    
+    
+    
