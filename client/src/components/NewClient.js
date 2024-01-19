@@ -32,11 +32,11 @@ function NewClient({addClient}) {
     return (
         <div className='new-client-form'>
             <form onSubmit ={handleSubmit}>
-                <input onChange= {fnameChange} type='text' name='fname' placeholder='First name' />
-                <input onChange= {lnameChange} type='text' name='lname' placeholder='Last name' />
-                <input onChange= {ageChange} type='number' name='age' placeholder='Client Age' />
-                <input onChange= {emailChange} type='text' name='email' placeholder='Client Email' />
-                <input onChange= {numberChange} type='text' name='number' placeholder='Client Telephone' />
+                <input onChange= {fnameChange} type='text' name='fname' placeholder=' First name' />
+                <input className='input' onChange= {lnameChange} type='text' name='lname' placeholder=' Last name' />
+                <input className='input' onChange= {ageChange} type='number' name='age' placeholder=' Client Age' />
+                <input className='input' onChange= {emailChange} type='text' name='email' placeholder=' Client Email' />
+                <input className='input' onChange= {numberChange} type='text' name='number' placeholder=' Client Telephone' />
                 <button type='submit'>Add Client</button>
             </form>
         </div>

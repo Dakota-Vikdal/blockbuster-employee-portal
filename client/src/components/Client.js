@@ -22,15 +22,32 @@ function Client() {
       .then(setClients);
   }, []);
 
+  // const addClient = (cO) => {
+  //   const clientArr = [...clients, cO]
+  //   fetch('http://localhost:5555/clients', {
+  //     method: 'POST',
+  //     headers: {'Content-Type': 'application/json'},
+  //     body: JSON.stringify(cO)
+  //   })
+  //   .then(response => response.json())
+  //   setClients(clientArr)
+  // }
+  //////////////Trying something new///////////////////
+
   const addClient = (cO) => {
-    const clientArr = [...clients, cO]
     fetch('http://localhost:5555/clients', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(cO)
-    })
-    .then(response => response.json())
-    setClients(clientArr)
+       method: 'POST',
+       headers: {'Content-Type': 'application/json'},
+       body: JSON.stringify(cO)
+     })
+     .then(response => response.json())
+     .then(createClient => {
+      const updatedClients = [...clients, createClient]
+      setClients(updatedClients)
+     })
+     .catch(error => {
+      console.error('Error adding client:', error)
+     })
   }
   
 

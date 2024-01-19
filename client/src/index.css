@@ -147,8 +147,12 @@
         cursor: pointer;
         color: var(--text-color);
         margin-right: 0.5rem;
+        margin-left: 10px;
       }
       button:hover {
         text-decoration: underline;
+      }
+      .input{
+        margin-left: 5px
       }
   }

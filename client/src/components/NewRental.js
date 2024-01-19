@@ -17,7 +17,7 @@ function NewRental({addRental}) {
             client_id: newClientId 
         }
         addRental(newRental)
-        
+
         e.target.reset()
     }
 
@@ -26,8 +26,8 @@ function NewRental({addRental}) {
             <form onSubmit ={handleSubmit}>
 
                 {/* <input onChange= {handleRentalId} type='text' name='name' placeholder='Rental Number' /> */}
-                <input onChange= {movieIdChange} type='number' name='cost' step='1' placeholder='Movie Id' />
-                <input onChange= {clientIdChange} type='text' name='rating' placeholder='Client Id' />
+                <input onChange= {movieIdChange} type='number' name='cost' step='1' placeholder=' Movie Id' />
+                <input className='input' onChange= {clientIdChange} type='text' name='rating' placeholder=' Client Id' />
                 <button type='submit'>Add Rental</button>
             </form>
         </div>
